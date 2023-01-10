@@ -94,23 +94,23 @@ async def on_shutdown(dp):
 
 
 
-# if __name__ == "__main__":
-# 	# HTTP_PROXY / HTTPS_PROXY environment
+if __name__ == "__main__":
+	# HTTP_PROXY / HTTPS_PROXY environment
 
-# 	HTTP_PROXY = os.getenv("HTTP_PROXY")
-# 	HTTPS_PROXY = os.getenv("HTTPS_PROXY")
-# 	print(f"HTTP_PROXY: {HTTP_PROXY}")
-# 	print(f"HTTPS_PROXY: {HTTPS_PROXY}")
+	HTTP_PROXY = os.getenv("HTTP_PROXY")
+	HTTPS_PROXY = os.getenv("HTTPS_PROXY")
+	print(f"HTTP_PROXY: {HTTP_PROXY}")
+	print(f"HTTPS_PROXY: {HTTPS_PROXY}")
 
-# 	if MODE == "dev":
-# 		executor.start_polling(dp, skip_updates=True, on_shutdown=on_shutdown)
-# 	else:
-# 		start_webhook(
-# 			dispatcher=dp,
-# 			webhook_path=WEBHOOK_PATH,
-# 			on_startup=on_startup,
-# 			on_shutdown=on_shutdown,
-# 			skip_updates=True,
-# 			host=WEBAPP_HOST,
-# 			port=WEBAPP_PORT,
-# 		)
+	if MODE == "dev":
+		executor.start_polling(dp, skip_updates=True, on_shutdown=on_shutdown)
+	else:
+		start_webhook(
+			dispatcher=dp,
+			webhook_path=WEBHOOK_PATH,
+			on_startup=on_startup,
+			on_shutdown=on_shutdown,
+			skip_updates=True,
+			host=WEBAPP_HOST,
+			port=WEBAPP_PORT,
+		)
