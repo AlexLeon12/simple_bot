@@ -39,6 +39,7 @@ print("WEBHOOK_URL", type(WEBHOOK_URL), WEBHOOK_URL)
 print("WEBAPP_HOST", type(WEBAPP_HOST), WEBAPP_HOST)
 print("WEBAPP_PORT", type(WEBAPP_PORT), WEBAPP_PORT)
 print("ADMIN_ID", type(ADMIN_ID), ADMIN_ID)
+print("API_TOKEN", type(API_TOKEN), API_TOKEN)
 
 
 logging.basicConfig(level=logging.INFO)
